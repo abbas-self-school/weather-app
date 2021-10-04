@@ -51,9 +51,12 @@ class WeatherApp extends Component {
 
   render () {
     return (
-      <div className="w-full">
-        <div className="w-[80%] m-auto mt-8">
-          <h1 className="text-6xl text-gray-800 text-center my-6">Weather of city</h1>
+      <div className="w-full relative">
+        <img src="/weather.jpg"
+        className="absolute w-[100%] h-[900px] z-0 top-0" 
+        alt="" />
+        <div className="w-[80%] m-auto mt-8 z-50 relative">
+          <h1 className="text-2xl xl:text-6xl text-white text-center my-6">Weather of city</h1>
           <Form getWeather={this.getWeather} />
           <Weather
             temperature= {this.state.temperature}
@@ -64,11 +67,11 @@ class WeatherApp extends Component {
             error= {this.state.error}
           />
         </div>
-        <div className="w-[80%] m-auto mt-8 mb-3 text-center">
-          <span className="text-xl">
+        <div className="w-[80%] m-auto mt-20 mb-3 text-center z-50 relative">
+          <span className="text-sm xl:text-xl text-white">
               Developed by: 
               <Link href="/">
-                  <span className="text-xl text-blue-400 cursor-pointer"> Abbas Msheik</span>
+                  <span className="text-sm xl:text-xl text-blue-400 cursor-pointer"> Abbas Msheik</span>
               </Link>
           </span>
         </div>
